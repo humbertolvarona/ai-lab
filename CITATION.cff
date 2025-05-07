@@ -1,0 +1,20 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+title: "AI Lab: Docker Image for Machine Learning & Data Science"
+version: "v1.0"
+doi: "10.5281/zenodo.15353983"
+date-released: 2025-05-03
+authors:
+  - family-names: Varona
+    given-names: Humberto L.
+    name: H. L. Varona
+license: "CC-BY-4.0"
+preferred-citation:
+  type: software
+  title: "AI Lab: Docker Image for Machine Learning & Data Science"
+  version: "v1.0"
+  doi: "10.5281/zenodo.15353983"
+  authors:
+    - name: H. L. Varona
+  publisher: "Zenodo"
+  year: 2025
