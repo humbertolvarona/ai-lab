@@ -1,0 +1,12 @@
+8,0K  demo.ipynb
+5,4K  test_NLP_with_transformers.ipynb
+5,3K  test_prophet.ipynb
+2,9K  test_pytorch_MNIST.ipynb
+1,1K  test_pytorch.ipynb
+20K   test_scikit-learn.ipynb
+22K   test_sklearn_and_nltk.ipynb
+22K   test_spacy.ipynb
+3,6K  test_tf_keras_MNIST.ipynb
+1,1K  test_tf.ipynb
+288K  test_Ultralytics_YOLOv8.ipynb
+1,7K  test_xgboost.ipynb
