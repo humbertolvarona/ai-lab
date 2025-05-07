@@ -1,0 +1,46 @@
+version: '3.9'
+
+services:
+  ai-lab:
+    build: .
+    container_name: ai-lab
+    ports:
+      - "8888:8888"
+    volumes:
+      - ./workspace:/workspace
+    environment:
+      ENABLE_GPU: ${ENABLE_GPU:-no}
+      GPU_TYPE: ${GPU_TYPE:-CUDA}
+    profiles:
+      - cpu
+      - gpu-cuda
+      - gpu-rocm
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              capabilities: [gpu]
+
+# Configuración por perfil
+profiles:
+  cpu:
+    description: "Ejecución en modo CPU (por defecto)"
+  gpu-cuda:
+    description: "Ejecución con soporte GPU NVIDIA (CUDA)"
+    services:
+      ai-jupyter:
+        runtime: nvidia
+        environment:
+          ENABLE_GPU: "yes"
+          GPU_TYPE: "CUDA"
+          TZ: "America/Recife"
+
+  gpu-rocm:
+    description: "Ejecución con soporte GPU AMD (ROCm)"
+    services:
+      ai-jupyter:
+        environment:
+          ENABLE_GPU: "yes"
+          GPU_TYPE: "ROCM"
+          TZ: "America/Recife"
