@@ -235,7 +235,7 @@ docker run -d \
 ## docker-compose.yml
 
 ```
-version: '3.9'
+version: '3'
 
 services:
   ai-lab:
